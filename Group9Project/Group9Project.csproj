@@ -123,6 +123,11 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlotListView.xaml.cs">
+      <DependentUpon>SlotListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SlotMachineHistoryTemplate.cs" />
+    <Compile Include="SlotMachineRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +135,14 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\1891SlotMachine.jpg" />
+    <Content Include="Assets\1964SlotMachine.jpg" />
+    <Content Include="Assets\1996+SlotMachine.jpg" />
+    <Content Include="Assets\apple.png" />
+    <Content Include="Assets\grape.png" />
+    <Content Include="Assets\Jackpot.png" />
+    <Content Include="Assets\orange.png" />
+    <Content Include="Assets\pear.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -147,6 +160,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SlotListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
