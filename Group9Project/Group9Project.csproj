@@ -123,11 +123,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SlotListView.xaml.cs">
-      <DependentUpon>SlotListView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SlotMachineHistoryTemplate.cs" />
-    <Compile Include="SlotMachineRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
