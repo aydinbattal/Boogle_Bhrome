@@ -22,11 +22,11 @@
         <StackPanel Orientation="Vertical">
             <StackPanel>
                 <Image Source="../Assets/Deep's Pictures/Timeline.jpg" Width="1000"></Image>
-                <Button Content="View History" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" FontSize="20"/>
+                <Button Margin="10" Content="View History" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" FontSize="20"/>
             </StackPanel>
             <TextBlock FontSize="20" Margin="10" Text="Try our very own version of Slot Machine" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
             <TextBlock Margin="20" Text="Click 'Play Game' Button below!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
-            <Button></Button>
+            <Button FontSize="40" Margin="10" Content="Play Game!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" />
 
         </StackPanel>
     </StackPanel>
