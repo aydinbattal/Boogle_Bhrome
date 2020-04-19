@@ -47,8 +47,6 @@ namespace Group9Project.Deep_s_Pages
                 Year = 1996
             });
 
-
-
             return history;
         }
     }

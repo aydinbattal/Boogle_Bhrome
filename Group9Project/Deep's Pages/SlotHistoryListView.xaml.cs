@@ -46,5 +46,10 @@ namespace Group9Project.Deep_s_Pages
         {
             this.Frame.Navigate(typeof(SlotMachineGame));
         }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }
