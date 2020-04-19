@@ -11,8 +11,10 @@
     <Grid>
         <StackPanel>
             <TextBox x:Name="Searchbar" Margin="10"  FontSize="30" PlaceholderText="Search for website..."/>
-            <Button Click="ButtonBase_OnClick" Margin="10" Content="Search" FontSize="30"/>
+            <Button Click="SearchButtonClick" Margin="10" Content="Search" FontSize="30"/>
             <TextBlock Opacity="50" FontSize="100" Text="Boogle Bhrome" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox x:Name="Username" Margin="20" PlaceholderText="Type username" HorizontalAlignment="Center" FontSize="15"/>
+            <Button Click="UsernameButtonClick" FontSize="15" Content="Set Username" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>

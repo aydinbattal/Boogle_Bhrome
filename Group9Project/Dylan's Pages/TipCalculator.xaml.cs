@@ -26,10 +26,5 @@ namespace Group9Project.Dylan_s_Pages
         {
             this.InitializeComponent();
         }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -24,18 +24,24 @@ namespace Group9Project
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        static User user = new User();
         public MainPage()
         {
             this.InitializeComponent();
-            User user = new User();
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void SearchButtonClick(object sender, RoutedEventArgs e)
         {
             //Search button click
 
             if (Searchbar.Text == "www.tipcalculator.com")
                 this.Frame.Navigate(typeof(TipCalculator));
+        }
+        
+        private void UsernameButtonClick(object sender, RoutedEventArgs e)
+        {
+            //Username button click
+            user.Username = Username.Text;
         }
     }
 }
