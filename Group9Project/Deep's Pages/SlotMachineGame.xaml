@@ -10,15 +10,23 @@
 
     <Grid>
         <StackPanel>
-            <AppBarButton Icon="back" Label="Back" Click="AppBarButton_Click"/>
-            <TextBlock Text ="Slot Machine" FontSize="30" Foreground="White" TextAlignment="Center" Margin="40" />
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF63390E" Offset="0"/>
+                    <GradientStop Color="#FFBD9B77" Offset="0.349"/>
+                    <GradientStop Color="#FF63390E" Offset="1"/>
+                    <GradientStop Color="#FFBD9B77" Offset="0.676"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <AppBarButton Icon="back" Label="Back" Click="AppBarButton_Click" Foreground="Black" FontWeight="Bold"/>
+            <TextBlock Text ="Slot Machine" FontSize="80" Foreground="Black" TextAlignment="Center" Margin="40" FontWeight="Bold" />
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Image x:Name="FirstPicture" Source="Assets/Deep's Pictures/1.png" Width="120" Margin="20"></Image>
                 <Image x:Name="SecondPicture" Source="Assets/Deep's Pictures/2.png" Width="120" Margin="20"></Image>
                 <Image x:Name="ThirdPicture" Source="Assets/Deep's Pictures/3.png" Width="120" Margin="20"></Image>
             </StackPanel>
-            <Button x:Name="PlaySlots" Content="Play Slots" FontSize="30" Foreground="White" HorizontalAlignment="Center" Margin="50" Click="Button_Click" IsEnabled="True"/>
-            <TextBlock x:Name="CurrentBalanceLabel" Text="Your Balance is $0" FontSize="30" Foreground="White" TextAlignment="Center" Margin="40"/>
+            <Button x:Name="PlaySlots" Content="Play Slots" FontSize="30" Foreground="Black" HorizontalAlignment="Center" Margin="50" Click="Button_Click" IsEnabled="True" FontWeight="Bold"/>
+            <TextBlock x:Name="CurrentBalanceLabel" Text="" FontSize="30" Foreground="Black" TextAlignment="Center" Margin="40" FontWeight="Bold"/>
 
         </StackPanel>
 

@@ -12,34 +12,34 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using AppDevFinalProject.Karan_s_Pages.Classes;
-using Group9Project;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace AppDevFinalProject.Karan_s_Pages
+namespace Group9Project.Deep_s_Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SeatsPage : Page
+    public sealed partial class SlotMainPage : Page
     {
-        public SeatsPage()
+        public SlotMainPage()
         {
             this.InitializeComponent();
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            Seat seat = e.Parameter as Seat;
-            SeatPageView.Items.Add(seat);
-            //TODO: Get data from dylan
-            //Balance.Text = $"Remaining Balance: ${e.Parameter as string}";
-            //Name.Text = $"RSVP (NAME): {e.Parameter as string}";
+            this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void BackButton_OnClick(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Airplane));
+            this.Frame.Navigate(typeof(SlotHistoryListView));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SlotMachineGame));
         }
     }
 }

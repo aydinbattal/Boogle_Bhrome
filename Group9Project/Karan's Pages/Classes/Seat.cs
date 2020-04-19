@@ -15,6 +15,7 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
         public string Country { get; set; }
         public string BoardingTime { get; set; }
         public string Description { get; set; }
+        public int Price { get; set; }
 
         public string ImageName
         {

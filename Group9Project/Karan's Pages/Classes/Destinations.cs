@@ -11,7 +11,7 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
         
         static Random r = new Random();
         static int seatNumber = r.Next(0, 100);
-        static string boardingTime = DateTime.Now.AddHours(24).ToString("h:mm:ss tt");
+        static string boardingTime = DateTime.Now.AddHours(24).ToString("yyyy-M-d dddd");
         public static List<Seat> GetSeats()
         {
             List<Seat> seats = new List<Seat>();
@@ -19,7 +19,8 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
             {
                 Country = "Germany",
                 Number = seatNumber.ToString(),
-                Description = "Germany is cool",
+                Price = 400,
+                Description = "One way ticket to Germany's Capital from Toronto Pearson (YYZ) \n Capital = Berlin (BER)",
                 ImageName = "Germany.gif",
                 BoardingTime = boardingTime
             });
@@ -27,7 +28,8 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
             {
                 Country = "Canada",
                 Number = seatNumber.ToString(),
-                Description = "Canada is cool",
+                Price = 200,
+                Description = "One way ticket to Canada's Capital from Toronto Pearson (YYZ) \n Capital = Ottawa (YOW)",
                 ImageName = "Canada.gif",
                 BoardingTime = boardingTime
             });
@@ -35,7 +37,8 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
             {
                 Country = "Australia",
                 Number = seatNumber.ToString(),
-                Description = "Australia is cool",
+                Price = 700,
+                Description = "One way ticket to Australia's Capital from Toronto Pearson (YYZ) \n Capital = Canberra (CBR)",
                 ImageName = "Australia.gif",
                 BoardingTime = boardingTime
             });
@@ -43,23 +46,26 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
             {
                 Country = "Japan",
                 Number = seatNumber.ToString(),
-                Description = "Japan is cool",
+                Price = 650,
+                Description = "One way ticket to Japan's Capital from Toronto Pearson (YYZ) \n Capital = Tokyo (HND)",
                 ImageName = "Japan.gif",
                 BoardingTime = boardingTime
             });
             seats.Add(new Seat
             {
                 Country = "United-Kingdom",
+                Price = 300,
                 Number = seatNumber.ToString(),
-                Description = "United-Kingdom is cool",
+                Description = "One way ticket to United Kingdom's Capital from Toronto Pearson (YYZ) \n Capital = London (YXU)",
                 ImageName = "United-Kingdom.gif",
                 BoardingTime = boardingTime
             });
             seats.Add(new Seat
             {
                 Country = "USA",
+                Price = 150,
                 Number = seatNumber.ToString(),
-                Description = "USA is cool",
+                Description = "One way ticket to USA's Capital from Toronto Pearson (YYZ) \n Capital = Washington (IAD)",
                 ImageName = "USA.gif",
                 BoardingTime = boardingTime
             });

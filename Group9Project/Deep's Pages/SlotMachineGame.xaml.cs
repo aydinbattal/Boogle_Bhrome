@@ -37,20 +37,18 @@ namespace Group9Project.Deep_s_Pages
                 MessageDialog message = new MessageDialog("Your Game is over");
                 message.ShowAsync();
                 PlaySlots.IsEnabled = false;
-                
-                return; //starts the code again so your game restarts
             }
 
             List<int> numbers = _game.Roll();
 
-            //todo: 2. If a jackpot, show a message
+            
             if (_game.IsJackpot)
             {
                 MessageDialog message = new MessageDialog("Your Got a Jackpot");
                 message.ShowAsync();
             }
 
-            //todo: 3. Assign the random image to ImageControl
+            
             FirstPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[0]}.png", UriKind.RelativeOrAbsolute));
             SecondPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[1]}.png", UriKind.RelativeOrAbsolute));
             ThirdPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[2]}.png", UriKind.RelativeOrAbsolute));
@@ -59,7 +57,7 @@ namespace Group9Project.Deep_s_Pages
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SlotHistoryListView));
+            this.Frame.Navigate(typeof(SlotMainPage));
         }
     }
 }

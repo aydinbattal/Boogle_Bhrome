@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using AppDevFinalProject.Karan_s_Pages;
+using Group9Project.Dylan_s_Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,14 +24,24 @@ namespace Group9Project
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        static User user = new User();
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void AirplaneButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void SearchButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Airplane));
+            //Search button click
+
+            if (Searchbar.Text == "www.tipcalculator.com")
+                this.Frame.Navigate(typeof(TipCalculator));
+        }
+        
+        private void UsernameButtonClick(object sender, RoutedEventArgs e)
+        {
+            //Username button click
+            user.Username = Username.Text;
         }
     }
 }

@@ -14,7 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Group9Project.Aydin_s_Pages;
 using Group9Project.Deep_s_Pages;
 
 namespace Group9Project
@@ -68,7 +67,7 @@ namespace Group9Project
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(BankPage), e.Arguments);
+                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
