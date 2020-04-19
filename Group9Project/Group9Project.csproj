@@ -119,6 +119,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Aydin%27s Pages\BankPage.xaml.cs">
+      <DependentUpon>BankPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aydin%27s Pages\BankSystem.cs" />
+    <Compile Include="Aydin%27s Pages\InvoiceHistoryPage.xaml.cs">
+      <DependentUpon>InvoiceHistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Aydin%27s Pages\InvoiceSystem.cs" />
     <Compile Include="Deep%27s Pages\SlotGame.cs" />
     <Compile Include="Deep%27s Pages\SlotHistoryListView.xaml.cs">
       <DependentUpon>SlotHistoryListView.xaml</DependentUpon>
@@ -178,6 +186,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Aydin%27s Pages\BankPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Aydin%27s Pages\InvoiceHistoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Deep%27s Pages\SlotHistoryListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
