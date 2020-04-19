@@ -9,6 +9,46 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/bankbackground.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_OnClick" Foreground="Black" RenderTransformOrigin="0.5,0.5" Margin="68,0,0,0" VerticalAlignment="Center" >
+            <AppBarButton.RenderTransform>
+                <CompositeTransform ScaleX="3" ScaleY="3"/>
+            </AppBarButton.RenderTransform>
+        </AppBarButton>
+
+        <TextBlock x:Name="PlaceholderDate" Text="Date" Grid.Column="4" Grid.Row="0" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black"/>
+
+        <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="PlaceholderName" Text="Username" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,50" VerticalAlignment="Stretch" FontWeight="Bold" FontFamily="Agency FB" Foreground="Black"/>
+            <TextBlock x:Name="PlaceholderBalance" Text="Balance" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,50" FontFamily="Agency FB" FontWeight="Bold" Foreground="Black"/>
+            <TextBlock x:Name="PlaceholderOverdraft" Text="Overdraft Amount" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Agency FB" Foreground="Black"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="DepositAmt" PlaceholderText="Enter Deposit Amount" Margin="0,0,0,50" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Normal" FontFamily="Agency FB"/>
+            <TextBox x:Name="WithdrawAmt" PlaceholderText="Enter Withdraw Amount" FontSize="30" HorizontalAlignment="Center" FontFamily="Agency FB" FontWeight="Normal" VerticalAlignment="Center"/>
+        </StackPanel>
+
+
+
+        <Button x:Name="ProcessBtn" Content="Process" FontSize="30" Grid.Column="1" Grid.Row="3" Click="DepositButton_OnClick" FontWeight="Bold" FontFamily="Agency FB" Grid.ColumnSpan="2" Margin="280,0,0,0" Foreground="Black"/>
+        <Button x:Name="InvoiceHistoryBtn" Content="Show History" FontSize="30" Grid.Column="2" Grid.Row="3" Click="InvoiceButton_OnClick" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="Black"/>
 
     </Grid>
 </Page>
