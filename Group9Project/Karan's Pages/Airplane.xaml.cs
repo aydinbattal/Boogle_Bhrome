@@ -37,6 +37,8 @@ namespace AppDevFinalProject.Karan_s_Pages
         }
         private void AirplaneListView_OnDoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
+
+            //todo: subtract ticket price from balance from dylans program
             Seat seat = AirplaneListView.SelectedItem as Seat;
             this.Frame.Navigate(typeof(SeatsPage), seat);
         }

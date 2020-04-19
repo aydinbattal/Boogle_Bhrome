@@ -17,7 +17,7 @@
                 <GradientStop Color="#2DA8E5" Offset="0.835"/>
             </LinearGradientBrush>
         </StackPanel.Background>
-        <TextBlock Padding="10" FontWeight="Bold" Text="Boogle Airlines" FontSize="30" TextAlignment="Center"></TextBlock>
+        <TextBlock Foreground="DimGray" Padding="10" FontWeight="Bold" Text="Boogle Airlines" FontSize="30" TextAlignment="Center"></TextBlock>
         <ListView DoubleTapped="AirplaneListView_OnDoubleTapped" x:Name="AirplaneListView">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="classes:Seat">
@@ -25,13 +25,13 @@
                         <Image Width="100" Source="{x:Bind Image.Source}"></Image>
                         <StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Padding="10" Text="Your Current Seat Is: "></TextBlock>
-                                <TextBlock Padding="10" Text="{x:Bind Number}" FontWeight="Bold"></TextBlock>
+                                <TextBlock Foreground="Black" Padding="10" Text="Your Current Seat Is: "></TextBlock>
+                                <TextBlock Foreground="Black" Padding="10" Text="{x:Bind Number}" FontWeight="Bold"></TextBlock>
                             </StackPanel>
                             
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Padding="10" Text="Current Boarding Time Is: "></TextBlock>
-                                <TextBlock Padding="10" Text="{x:Bind BoardingTime}"></TextBlock>
+                                <TextBlock Foreground="Black" Padding="10" Text="Next Boarding Date Is: "></TextBlock>
+                                <TextBlock Foreground="Black"  Padding="10" Text="{x:Bind BoardingTime}"></TextBlock>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
