@@ -119,11 +119,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Deep%27s Pages\SlotGame.cs" />
     <Compile Include="Deep%27s Pages\SlotHistoryListView.xaml.cs">
       <DependentUpon>SlotHistoryListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Deep%27s Pages\SlotHistoryView.xaml.cs">
       <DependentUpon>SlotHistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deep%27s Pages\SlotMachineGame.xaml.cs">
+      <DependentUpon>SlotMachineGame.xaml</DependentUpon>
     </Compile>
     <Compile Include="Deep%27s Pages\SlotRepository.cs" />
     <Compile Include="Deep%27s Pages\SlotTemplate.cs" />
@@ -179,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Deep%27s Pages\SlotHistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deep%27s Pages\SlotMachineGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

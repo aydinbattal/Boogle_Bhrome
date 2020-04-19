@@ -18,16 +18,13 @@
                     <StackPanel Orientation="Horizontal">
                         <Image Width="100" Source="{x:Bind Image.Source}"/>
                         <StackPanel>
-                            <!--<TextBlock Text="{x:Bind Title}"/>-->
                             <TextBlock Text="{x:Bind Year}"/>
-
                         </StackPanel>
                     </StackPanel>
-
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
+        <Button FontSize="40" Content="Play Game" HorizontalAlignment="Center" Click="Button_Click"></Button>
 
     </StackPanel>
 </Page>

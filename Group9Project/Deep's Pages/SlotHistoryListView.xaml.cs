@@ -41,5 +41,10 @@ namespace Group9Project.Deep_s_Pages
             SlotTemplate item = MainListView.SelectedItem as SlotTemplate;
             this.Frame.Navigate(typeof(SlotHistoryView), item);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SlotMachineGame));
+        }
     }
 }
