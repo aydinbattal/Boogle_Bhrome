@@ -9,7 +9,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel Background="Black">
+    <StackPanel>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF9F9F9"/>
+                <GradientStop Color="#33BBFF" Offset="1"/>
+                <GradientStop Color="#2DA8E5" Offset="0.835"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
         <TextBlock Padding="10" FontWeight="Bold" Text="Boogle Airlines" FontSize="30" TextAlignment="Center"></TextBlock>
         <ListView DoubleTapped="AirplaneListView_OnDoubleTapped" x:Name="AirplaneListView">
             <ListView.ItemTemplate>

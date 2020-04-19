@@ -22,10 +22,48 @@ namespace AppDevFinalProject.Karan_s_Pages.Classes
                 Description = "Germany is cool",
                 ImageName = "Germany.gif",
                 BoardingTime = boardingTime
-
-
             });
-        
+            seats.Add(new Seat
+            {
+                Country = "Canada",
+                Number = seatNumber.ToString(),
+                Description = "Canada is cool",
+                ImageName = "Canada.gif",
+                BoardingTime = boardingTime
+            });
+            seats.Add(new Seat
+            {
+                Country = "Australia",
+                Number = seatNumber.ToString(),
+                Description = "Australia is cool",
+                ImageName = "Australia.gif",
+                BoardingTime = boardingTime
+            });
+            seats.Add(new Seat
+            {
+                Country = "Japan",
+                Number = seatNumber.ToString(),
+                Description = "Japan is cool",
+                ImageName = "Japan.gif",
+                BoardingTime = boardingTime
+            });
+            seats.Add(new Seat
+            {
+                Country = "United-Kingdom",
+                Number = seatNumber.ToString(),
+                Description = "United-Kingdom is cool",
+                ImageName = "United-Kingdom.gif",
+                BoardingTime = boardingTime
+            });
+            seats.Add(new Seat
+            {
+                Country = "USA",
+                Number = seatNumber.ToString(),
+                Description = "USA is cool",
+                ImageName = "USA.gif",
+                BoardingTime = boardingTime
+            });
+
             return seats;
         }
     }
