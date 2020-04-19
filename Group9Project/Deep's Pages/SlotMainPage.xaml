@@ -21,12 +21,12 @@
         <TextBlock Text="Welcome to Slot Machine Hub!" FontSize="40" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" Margin="0,0,0,10"/>
         <StackPanel Orientation="Vertical">
             <StackPanel>
-                <Image Source="../Assets/Deep's Pictures/Timeline.jpg" Width="1000"></Image>
-                <Button Margin="10" Content="View History" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" FontSize="20"/>
+                <Image Source="../Assets/Deep's Pictures/Timeline.jpg" Width="850"></Image>
+                <Button Margin="10" Content="View History" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
             </StackPanel>
             <TextBlock FontSize="20" Margin="10" Text="Try our very own version of Slot Machine" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
-            <TextBlock Margin="20" Text="Click 'Play Game' Button below!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
-            <Button FontSize="40" Margin="10" Content="Play Game!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" />
+            <TextBlock Text="Click 'Play Game' Button below!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+            <Button FontSize="40" Margin="10" Content="Play Game!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" Click="Button_Click_1" />
 
         </StackPanel>
     </StackPanel>

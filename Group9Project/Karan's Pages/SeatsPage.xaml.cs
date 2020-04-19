@@ -32,11 +32,14 @@ namespace AppDevFinalProject.Karan_s_Pages
         {
             Seat seat = e.Parameter as Seat;
             SeatPageView.Items.Add(seat);
+            //TODO: Get data from dylan
+            //Balance.Text = $"Remaining Balance: ${e.Parameter as string}";
+            //Name.Text = $"RSVP (NAME): {e.Parameter as string}";
         }
 
         private void BackButton_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(Airplane));
         }
     }
 }

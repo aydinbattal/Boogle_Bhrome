@@ -17,17 +17,29 @@
                 <GradientStop Color="#2DA8E5" Offset="0.835"/>
             </LinearGradientBrush>
         </StackPanel.Background>
-        <AppBarButton Icon="back" Label="Back" Click="BackButton_OnClick"/>
+        <AppBarButton Foreground="Black" Icon="back" Label="Back" Click="BackButton_OnClick"/>
         <ListView x:Name="SeatPageView">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="classes:Seat">
                     <StackPanel Orientation="Horizontal">
                         <Image Margin="10" Width="400" Source="{x:Bind Image.Source}"></Image>
                         <StackPanel>
-                            <TextBlock x:Name="SeatCountry" FontSize="50" TextWrapping="Wrap" Margin="10" Text="{x:Bind Country}"></TextBlock>
-                            <TextBlock x:Name="SeatNumber" FontSize="50" TextWrapping="Wrap" Margin="10" Text="{x:Bind Number}"></TextBlock>
-                            <TextBlock x:Name="SeatBoardingTime" FontSize="25" TextWrapping="Wrap" Margin="10" Text="{x:Bind BoardingTime}"></TextBlock>
-                            <TextBlock x:Name="SeatDesc" FontSize="20" TextWrapping="WrapWholeWords" Margin="10" MaxWidth="550" Text="{x:Bind Description}"></TextBlock>
+                            <TextBlock x:Name="SeatCountry" Foreground="Black" FontSize="50" TextWrapping="Wrap" Margin="10" Text="{x:Bind Country}"></TextBlock>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock  Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="Seat Number: "></TextBlock>
+                                <TextBlock x:Name="SeatNumber" Foreground="Black" FontSize="50" TextWrapping="Wrap" Margin="10" Text="{x:Bind Number}"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock  Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="Boarding Time: "></TextBlock>
+                                <TextBlock x:Name="SeatBoardingTime" Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="{x:Bind BoardingTime}"></TextBlock>
+                            </StackPanel>
+
+                            <TextBlock x:Name="SeatDesc" Foreground="Black" FontSize="20" TextWrapping="WrapWholeWords" Margin="10" MaxWidth="550" Text="{x:Bind Description}"></TextBlock>
+                            <!-- TODO: Once dylans class works display remaining balance -->
+                            <TextBlock x:Name="Balance"  Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="Remaining Balance: XXXX "></TextBlock>
+                            <!-- TODO: Once dylans class works display the customer name -->
+                            <TextBlock x:Name="Name"  Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="RSVP (Name): XXXX "></TextBlock>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>

@@ -57,7 +57,7 @@ namespace Group9Project.Deep_s_Pages
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SlotHistoryListView));
+            this.Frame.Navigate(typeof(SlotMainPage));
         }
     }
 }
