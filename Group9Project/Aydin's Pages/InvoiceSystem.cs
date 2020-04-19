@@ -8,5 +8,29 @@ namespace Group9Project.Aydin_s_Pages
 {
     class InvoiceSystem
     {
+        public int InvoiceNumber { get; set; }
+        public DateTime Date { get; set; }
+
+        public double DepositAmount { get; set; }
+        public double WithDrawAmount { get; set; }
+
+        public double TempBalance { get; set; }
+
+        public List<InvoiceSystem> InvoiceList = new List<InvoiceSystem>();
+        public void AddInvoice(double depositAmt, double withdrawAmt, double balance)
+        {
+            int id = InvoiceList.Count + 1;
+            InvoiceList.Add(new InvoiceSystem
+            {
+                InvoiceNumber = id,
+                Date = DateTime.Now,
+                DepositAmount = depositAmt,
+                WithDrawAmount = withdrawAmt,
+                TempBalance = balance
+            });
+        }
+
+
+
     }
 }
