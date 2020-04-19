@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Group9Project.Deep_s_Pages.SlotMainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Group9Project.Deep_s_Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF63390E" Offset="0"/>
+                <GradientStop Color="#FFBD9B77" Offset="0.349"/>
+                <GradientStop Color="#FF63390E" Offset="1"/>
+                <GradientStop Color="#FFBD9B77" Offset="0.676"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <AppBarButton Icon="Back" Label="Back" Foreground="Black" FontWeight="Bold" Click="AppBarButton_Click"></AppBarButton>
+        <TextBlock Text="Welcome to Slot Machine Hub!" FontSize="40" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" Margin="0,0,0,10"/>
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <Image Source="../Assets/Deep's Pictures/Timeline.jpg" Width="1000"></Image>
+                <Button Margin="10" Content="View History" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" FontSize="20"/>
+            </StackPanel>
+            <TextBlock FontSize="20" Margin="10" Text="Try our very own version of Slot Machine" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+            <TextBlock Margin="20" Text="Click 'Play Game' Button below!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+            <Button FontSize="40" Margin="10" Content="Play Game!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" />
+
+        </StackPanel>
+    </StackPanel>
+</Page>

@@ -9,15 +9,23 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"></AppBarButton>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF63390E" Offset="0"/>
+                <GradientStop Color="#FFBD9B77" Offset="0.349"/>
+                <GradientStop Color="#FF63390E" Offset="1"/>
+                <GradientStop Color="#FFBD9B77" Offset="0.676"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click" Foreground="Black" FontWeight="Bold"></AppBarButton>
         <ListView x:Name="ViewHistory">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:SlotTemplate">
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <Image Margin="10" Width="400" Source="{x:Bind Image.Source}"/>
                         <StackPanel>
-                            <TextBlock Margin="10" Text="{x:Bind Year}"/>
-                            <TextBlock Margin="10" MaxWidth="550" TextWrapping="WrapWholeWords" Text="{x:Bind Description}"/>
+                            <TextBlock FontSize="40" Margin="10" Text="{x:Bind Year}" FontWeight="Bold" Foreground="Black"/>
+                            <TextBlock Margin="10" MaxWidth="550" TextWrapping="WrapWholeWords" Text="{x:Bind Description}" Foreground="Black"/>
                         </StackPanel>
                     </StackPanel>
 

@@ -20,31 +20,16 @@ namespace Group9Project.Deep_s_Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SlotHistoryListView : Page
+    public sealed partial class SlotMainPage : Page
     {
-        public SlotHistoryListView()
+        public SlotMainPage()
         {
             this.InitializeComponent();
-            PopulateHistory();
-        }
-
-        private void PopulateHistory()
-        {
-            foreach (var history in SlotRepository.GetHistory())
-            {
-                MainListView.Items.Add(history);
-            }
-        }
-
-        private void MainListView_OnDoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
-        {
-            SlotTemplate item = MainListView.SelectedItem as SlotTemplate;
-            this.Frame.Navigate(typeof(SlotHistoryView), item);
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+
         }
     }
 }

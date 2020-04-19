@@ -10,21 +10,28 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"></AppBarButton>
-        <TextBlock FontSize="40" TextAlignment="Center" Text="Slot Machine Navigator"></TextBlock>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF63390E" Offset="0"/>
+                <GradientStop Color="#FFBD9B77" Offset="0.349"/>
+                <GradientStop Color="#FF63390E" Offset="1"/>
+                <GradientStop Color="#FFBD9B77" Offset="0.676"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click" FocusVisualPrimaryBrush="Black" Foreground="Black" FontWeight="Bold" ></AppBarButton>
+        <TextBlock FontSize="40" TextAlignment="Center" Text="Slot Machine Navigator" FontWeight="Bold" Foreground="Black" Margin="0,0,0,20"></TextBlock>
         <ListView DoubleTapped="MainListView_OnDoubleTapped" x:Name="MainListView">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:SlotTemplate">
                     <StackPanel Orientation="Horizontal">
-                        <Image Width="100" Source="{x:Bind Image.Source}"/>
-                        <StackPanel>
-                            <TextBlock Text="{x:Bind Year}"/>
+                        <Image Margin="20" Width="100" Source="{x:Bind Image.Source}"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock FontSize="40" Margin="20" Text="{x:Bind Year}" FontWeight="Bold" Foreground="Black"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button FontSize="40" Content="Play Game" HorizontalAlignment="Center" Click="Button_Click"></Button>
-
     </StackPanel>
+
 </Page>

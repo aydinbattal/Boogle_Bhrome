@@ -12,30 +12,24 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using AppDevFinalProject.Karan_s_Pages;
-using Group9Project.Dylan_s_Pages;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Group9Project
+namespace Group9Project.Dylan_s_Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class TipCalculator : Page
     {
-        public MainPage()
+        public TipCalculator()
         {
             this.InitializeComponent();
-            User user = new User();
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void InitializeComponent()
         {
-            //Search button click
-
-            if (Searchbar.Text == "www.tipcalculator.com")
-                this.Frame.Navigate(typeof(TipCalculator));
+            throw new NotImplementedException();
         }
     }
 }

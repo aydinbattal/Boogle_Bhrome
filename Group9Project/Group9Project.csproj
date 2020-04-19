@@ -137,8 +137,15 @@
     <Compile Include="Deep%27s Pages\SlotMachineGame.xaml.cs">
       <DependentUpon>SlotMachineGame.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Deep%27s Pages\SlotMainPage.xaml.cs">
+      <DependentUpon>SlotMainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Deep%27s Pages\SlotRepository.cs" />
     <Compile Include="Deep%27s Pages\SlotTemplate.cs" />
+    <Compile Include="Dylan%27s Pages\TipCalculator.xaml.cs">
+      <DependentUpon>TipCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dylan%27s Pages\User.cs" />
     <Compile Include="Karan%27s Pages\Airplane.xaml.cs">
       <DependentUpon>Airplane.xaml</DependentUpon>
     </Compile>
@@ -165,6 +172,7 @@
     <Content Include="Assets\Deep%27s Pictures\0.png" />
     <Content Include="Assets\Australia.gif" />
     <Content Include="Assets\Canada.gif" />
+    <Content Include="Assets\Deep%27s Pictures\Timeline.jpg" />
     <Content Include="Assets\Germany.gif" />
     <Content Include="Assets\Deep%27s Pictures\1.png" />
     <Content Include="Assets\Deep%27s Pictures\4.png" />
@@ -204,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Deep%27s Pages\SlotMachineGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deep%27s Pages\SlotMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
