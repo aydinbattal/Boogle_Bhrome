@@ -22,9 +22,22 @@ namespace Group9Project.Aydin_s_Pages
     /// </summary>
     public sealed partial class InvoiceHistoryPage : Page
     {
+        private List<InvoiceSystem> invoice = new List<InvoiceSystem>();
         public InvoiceHistoryPage()
         {
             this.InitializeComponent();
+            //InvoicePageView.ItemsSource = Invoice.InvoiceList;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            invoice = e.Parameter as List<InvoiceSystem>;
+            InvoiceHistoryPageView.ItemsSource = invoice;
+        }
+
+        private void BackBankButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BankPage), invoice);
         }
     }
 }
