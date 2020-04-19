@@ -27,6 +27,7 @@ namespace Group9Project
         public MainPage()
         {
             this.InitializeComponent();
+            User.Money = 100;
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
