@@ -19,11 +19,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
         <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_OnClick" Foreground="Black" RenderTransformOrigin="0.5,0.5" Margin="68,0,0,0" VerticalAlignment="Center" >
@@ -47,7 +47,7 @@
 
 
 
-        <Button x:Name="ProcessBtn" Content="Process" FontSize="30" Grid.Column="1" Grid.Row="3" Click="ProcessButton_OnClick" FontWeight="Bold" FontFamily="Agency FB" Grid.ColumnSpan="2" Margin="280,0,0,0" Foreground="Black"/>
+        <Button x:Name="ProcessBtn" Content="Process" FontSize="30" Grid.Column="1" Grid.Row="3" Click="ProcessButton_OnClick" FontWeight="Bold" FontFamily="Agency FB" Grid.ColumnSpan="2" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Button x:Name="InvoiceHistoryBtn" Content="Show History" FontSize="30" Grid.Column="2" Grid.Row="3" Click="InvoiceHistoryButton_OnClick" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="Black"/>
 
     </Grid>

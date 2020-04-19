@@ -31,8 +31,8 @@ namespace Group9Project.Aydin_s_Pages
         {
             this.InitializeComponent();
             PlaceholderDate.Text = DateTime.Now.ToString();
-            PlaceholderBalance.Text = bank.Balance.ToString();
-            PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
+            //PlaceholderBalance.Text = $"Your Balance: {bank.Balance}";
+            //PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
         }
 
         private void AppBarButton_OnClick(object sender, RoutedEventArgs e)
@@ -43,15 +43,17 @@ namespace Group9Project.Aydin_s_Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             List<InvoiceSystem> invoices = e.Parameter as List<InvoiceSystem>;
+
             if (invoices != null)
             {
                 foreach (var invoice in invoices)
                 {
                     _invoice.InvoiceList.Add(invoice);
-                    bank.UpdateBalance(invoice.TempBalance);
+                    bank.UpdateValues(invoice.TempBalance, invoice.TempOverdraftAmount);
                 }
             }
             PlaceholderBalance.Text = bank.Balance.ToString();
+            PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
 
         }
         private void ProcessButton_OnClick(object sender, RoutedEventArgs e)
@@ -61,13 +63,14 @@ namespace Group9Project.Aydin_s_Pages
 
             bank.Deposit(depositAmt);
             bank.Withdraw(withdrawAmt);
-            _invoice.AddInvoice(depositAmt, withdrawAmt, bank.Balance);
+            _invoice.AddInvoice(depositAmt, withdrawAmt, bank.Balance, bank.OverdraftAmount);
 
             int count = _invoice.InvoiceList.Count;
             MessageDialog dialog = new MessageDialog($"Invoice Number = {_invoice.InvoiceList[count - 1].InvoiceNumber} \n Date Processed = {_invoice.InvoiceList[count - 1].Date} \n Deposit Amount = {DepositAmt.Text} \n Withdraw Amount = {WithdrawAmt.Text}");
             dialog.ShowAsync();
 
             PlaceholderBalance.Text = bank.Balance.ToString();
+            PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
         }
 
 

@@ -9,40 +9,42 @@ namespace Group9Project.Aydin_s_Pages
     class BankSystem
     {
         public double Balance { get; protected set; }
-        public double OverdraftAmount { get; set; }
+        public double OverdraftAmount { get; protected set; }
         public string User { get; set; }
+        public BankSystem()
+        {
+            Balance = 100;
+            OverdraftAmount = 0;
+        }
 
         public void Deposit(double amount)
         {
             Balance += amount;
         }
-
-        public BankSystem()
-        {
-            Balance = 100;
-        }
-
         public void Withdraw(double amount)
         {
-            if (amount > Balance)
-                throw new InvalidOperationException("Not enough money");
 
-            if (Balance + OverdraftAmount < 0)
-                throw new Exception();
-
-
-            Balance -= amount;
-
-            if (Balance <= 0)
+            if (Balance < amount)
             {
-                Balance -= 100;
+                Balance = 0;
+                OverdraftAmount -= amount;
             }
+            else if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+
+            if (OverdraftAmount <= -100)
+                throw new Exception();
 
         }
 
-        public void UpdateBalance(double balance)
+        public void UpdateValues(double balance, double overdraftAmt)
         {
             Balance = balance;
+            OverdraftAmount = overdraftAmt;
+
+
         }
     }
 }
