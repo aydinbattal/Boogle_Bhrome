@@ -47,8 +47,8 @@
 
 
 
-        <Button x:Name="ProcessBtn" Content="Process" FontSize="30" Grid.Column="1" Grid.Row="3" Click="DepositButton_OnClick" FontWeight="Bold" FontFamily="Agency FB" Grid.ColumnSpan="2" Margin="280,0,0,0" Foreground="Black"/>
-        <Button x:Name="InvoiceHistoryBtn" Content="Show History" FontSize="30" Grid.Column="2" Grid.Row="3" Click="InvoiceButton_OnClick" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="Black"/>
+        <Button x:Name="ProcessBtn" Content="Process" FontSize="30" Grid.Column="1" Grid.Row="3" Click="ProcessButton_OnClick" FontWeight="Bold" FontFamily="Agency FB" Grid.ColumnSpan="2" Margin="280,0,0,0" Foreground="Black"/>
+        <Button x:Name="InvoiceHistoryBtn" Content="Show History" FontSize="30" Grid.Column="2" Grid.Row="3" Click="InvoiceHistoryButton_OnClick" FontFamily="Agency FB" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="Black"/>
 
     </Grid>
 </Page>
