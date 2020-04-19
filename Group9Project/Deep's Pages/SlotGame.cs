@@ -28,9 +28,9 @@ namespace Group9Project.Deep_s_Pages
             IsJackpot = false;
             if (numbers[0] == numbers[1] && numbers[1] == numbers[2])
             {
-                if (numbers[0] == 0) // 0.png is the 7
+                if (numbers[0] == 4) 
                 {
-                    Money = Money + 1000;
+                    Money += 1000;
                     IsJackpot = true;
                 }
 
@@ -69,7 +69,7 @@ namespace Group9Project.Deep_s_Pages
 
             for (int i = 0; i < 3; i++)
             {
-                numbers.Add(randomNumberGenerator.Next(0, 4));
+                numbers.Add(randomNumberGenerator.Next(0, 5));
 
             }
             

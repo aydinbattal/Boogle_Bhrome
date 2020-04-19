@@ -51,15 +51,15 @@ namespace Group9Project.Deep_s_Pages
             }
 
             //todo: 3. Assign the random image to ImageControl
-            FirstPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{numbers[0]}.png", UriKind.RelativeOrAbsolute));
-            SecondPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{numbers[1]}.png", UriKind.RelativeOrAbsolute));
-            ThirdPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{numbers[2]}.png", UriKind.RelativeOrAbsolute));
-            CurrentBalanceLabel.Text = $"Points: {_game.Money}, Bonus: {_game.Bonus}";
+            FirstPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[0]}.png", UriKind.RelativeOrAbsolute));
+            SecondPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[1]}.png", UriKind.RelativeOrAbsolute));
+            ThirdPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[2]}.png", UriKind.RelativeOrAbsolute));
+            CurrentBalanceLabel.Text = $"Money: {_game.Money}, Bonus: {_game.Bonus}";
         }
 
-        private void Button_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(SlotHistoryListView));
         }
     }
 }

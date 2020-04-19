@@ -10,7 +10,7 @@
 
     <StackPanel>
         <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"></AppBarButton>
-        <ListView x:Name="ViewMovie">
+        <ListView x:Name="ViewHistory">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:SlotTemplate">
                     <StackPanel Orientation="Horizontal" Margin="10">

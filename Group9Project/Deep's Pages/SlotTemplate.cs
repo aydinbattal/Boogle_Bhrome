@@ -22,7 +22,7 @@ namespace Group9Project.Deep_s_Pages
             set
             {
                 _imageName = value;
-                Image.Source = new BitmapImage(new Uri($"ms-appx:///Assets/{_imageName}", UriKind.RelativeOrAbsolute));
+                Image.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{_imageName}", UriKind.RelativeOrAbsolute));
             }
         }
 

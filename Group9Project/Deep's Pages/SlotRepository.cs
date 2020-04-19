@@ -15,7 +15,7 @@ namespace Group9Project.Deep_s_Pages
             movies.Add(new SlotTemplate
             {
 
-                Description = "The first Slot machine was developed by the New York based company called Sittman and Pitt in 1891.The game had five drumbs" +
+                Description = "The first Slot machine was developed by the New York based company called Sittman and Pitt in 1891.The game had five drums" +
                               "and a total of fifty playing cards. Players would insert their coins and pull the level to play.The payout would depend on the" +
                               "lining up of poker hands displayed on the drums. The first machine had no direct payout mechanism, therefore wins were paid at" +
                               " the bar the machine was. These wins were non monetary prizes such as drinks and cigars.",

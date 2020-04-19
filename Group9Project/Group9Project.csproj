@@ -150,18 +150,18 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\1891SlotMachine.jpg" />
-    <Content Include="Assets\1964SlotMachine.jpg" />
-    <Content Include="Assets\1996+SlotMachine.jpg" />
-    <Content Include="Assets\apple.png" />
+    <Content Include="Assets\Deep%27s Pictures\1891SlotMachine.jpg" />
+    <Content Include="Assets\Deep%27s Pictures\1964SlotMachine.jpg" />
+    <Content Include="Assets\Deep%27s Pictures\1996+SlotMachine.jpg" />
+    <Content Include="Assets\Deep%27s Pictures\0.png" />
     <Content Include="Assets\Australia.gif" />
     <Content Include="Assets\Canada.gif" />
     <Content Include="Assets\Germany.gif" />
-    <Content Include="Assets\grape.png" />
-    <Content Include="Assets\Jackpot.png" />
+    <Content Include="Assets\Deep%27s Pictures\1.png" />
+    <Content Include="Assets\Deep%27s Pictures\4.png" />
     <Content Include="Assets\Japan.gif" />
-    <Content Include="Assets\orange.png" />
-    <Content Include="Assets\pear.png" />
+    <Content Include="Assets\Deep%27s Pictures\2.png" />
+    <Content Include="Assets\Deep%27s Pictures\3.png" />
     <Content Include="Assets\United-Kingdom.gif" />
     <Content Include="Assets\USA.gif" />
     <Content Include="Properties\Default.rd.xml" />

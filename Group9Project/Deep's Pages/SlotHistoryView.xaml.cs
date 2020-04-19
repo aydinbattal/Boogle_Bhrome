@@ -30,7 +30,7 @@ namespace Group9Project.Deep_s_Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             SlotTemplate item = e.Parameter as SlotTemplate;
-            ViewMovie.Items.Add(item);
+            ViewHistory.Items.Add(item);
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
