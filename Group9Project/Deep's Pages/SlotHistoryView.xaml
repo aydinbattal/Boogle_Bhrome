@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Group9Project.Deep_s_Pages.SlotHistoryView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Group9Project.Deep_s_Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"></AppBarButton>
+        <ListView x:Name="ViewMovie">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:SlotTemplate">
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Image Margin="10" Width="400" Source="{x:Bind Image.Source}"/>
+                        <StackPanel>
+                            <TextBlock Margin="10" Text="{x:Bind Year}"/>
+                            <TextBlock Margin="10" MaxWidth="550" TextWrapping="WrapWholeWords" Text="{x:Bind Description}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Page>

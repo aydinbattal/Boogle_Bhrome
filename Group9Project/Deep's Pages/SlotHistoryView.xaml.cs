@@ -15,16 +15,27 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Group9Project
+namespace Group9Project.Deep_s_Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SlotListView : Page
+    public sealed partial class SlotHistoryView : Page
     {
-        public SlotListView()
+        public SlotHistoryView()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SlotTemplate item = e.Parameter as SlotTemplate;
+            ViewMovie.Items.Add(item);
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
         }
     }
 }
