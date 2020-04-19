@@ -25,10 +25,10 @@ namespace Group9Project.Deep_s_Pages
         public SlotHistoryListView()
         {
             this.InitializeComponent();
-            PopulateMovies();
+            PopulateHistory();
         }
 
-        private void PopulateMovies()
+        private void PopulateHistory()
         {
             foreach (var history in SlotRepository.GetHistory())
             {
@@ -45,6 +45,11 @@ namespace Group9Project.Deep_s_Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SlotMachineGame));
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

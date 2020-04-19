@@ -10,9 +10,9 @@ namespace Group9Project.Deep_s_Pages
     {
         public static List<SlotTemplate> GetHistory()
         {
-            List<SlotTemplate> movies = new List<SlotTemplate>();
+            List<SlotTemplate> history = new List<SlotTemplate>();
 
-            movies.Add(new SlotTemplate
+            history.Add(new SlotTemplate
             {
 
                 Description = "The first Slot machine was developed by the New York based company called Sittman and Pitt in 1891.The game had five drums" +
@@ -23,7 +23,7 @@ namespace Group9Project.Deep_s_Pages
                 Year = 1891
             });
 
-            movies.Add(new SlotTemplate
+            history.Add(new SlotTemplate
             {
 
                 Description = "The first fully electromechanical slot called Money Honey was release by Bally. The reels were entirely electrical but the game" +
@@ -35,7 +35,7 @@ namespace Group9Project.Deep_s_Pages
                 Year = 1964
             });
 
-            movies.Add(new SlotTemplate
+            history.Add(new SlotTemplate
             {
 
                 Description = "The next milestone came in 1996 when the Reel Em by WMS industries Inc was released. This was the first video slot machine to" +
@@ -47,9 +47,7 @@ namespace Group9Project.Deep_s_Pages
                 Year = 1996
             });
 
-
-
-            return movies;
+            return history;
         }
     }
 }

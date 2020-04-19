@@ -10,8 +10,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
+        <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"></AppBarButton>
         <TextBlock FontSize="40" TextAlignment="Center" Text="Slot Machine Navigator"></TextBlock>
-
         <ListView DoubleTapped="MainListView_OnDoubleTapped" x:Name="MainListView">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:SlotTemplate">
