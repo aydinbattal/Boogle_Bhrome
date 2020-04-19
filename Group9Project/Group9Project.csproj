@@ -119,6 +119,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Karan%27s Pages\Airplane.xaml.cs">
+      <DependentUpon>Airplane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Karan%27s Pages\Classes\Destinations.cs" />
+    <Compile Include="Karan%27s Pages\Classes\Seat.cs" />
+    <Compile Include="Karan%27s Pages\SeatsPage.xaml.cs">
+      <DependentUpon>SeatsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -134,6 +142,7 @@
     <Content Include="Assets\1964SlotMachine.jpg" />
     <Content Include="Assets\1996+SlotMachine.jpg" />
     <Content Include="Assets\apple.png" />
+    <Content Include="Assets\Germany.gif" />
     <Content Include="Assets\grape.png" />
     <Content Include="Assets\Jackpot.png" />
     <Content Include="Assets\orange.png" />
@@ -152,6 +161,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Karan%27s Pages\Airplane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Karan%27s Pages\SeatsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -166,6 +183,7 @@
       <Version>6.2.9</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
