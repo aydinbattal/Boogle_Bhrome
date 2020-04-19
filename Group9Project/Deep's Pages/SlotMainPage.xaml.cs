@@ -29,7 +29,17 @@ namespace Group9Project.Deep_s_Pages
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(MainPage));
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SlotHistoryListView));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SlotMachineGame));
         }
     }
 }
