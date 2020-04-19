@@ -24,7 +24,6 @@ namespace Group9Project
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        static User user = new User();
         public MainPage()
         {
             this.InitializeComponent();
@@ -41,7 +40,7 @@ namespace Group9Project
         private void UsernameButtonClick(object sender, RoutedEventArgs e)
         {
             //Username button click
-            user.Username = Username.Text;
+            User.Username = Username.Text;
         }
     }
 }

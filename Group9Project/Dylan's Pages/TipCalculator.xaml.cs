@@ -22,6 +22,9 @@ namespace Group9Project.Dylan_s_Pages
     /// </summary>
     public sealed partial class TipCalculator : Page
     {
+        public double HST { get; set; }
+        public double TipTotal { get; set; }
+        public double FinalTotal { get; set; }
         public TipCalculator()
         {
             this.InitializeComponent();
@@ -29,7 +32,8 @@ namespace Group9Project.Dylan_s_Pages
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+           // double billamount = BillAmount.Text;
+           // HST = (double)BillAmount.Text * 0.13;
         }
     }
 }
