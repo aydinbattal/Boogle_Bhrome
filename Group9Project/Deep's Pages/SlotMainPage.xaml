@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel Orientation="Vertical">
+    <StackPanel>
         <StackPanel.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF63390E" Offset="0"/>
@@ -17,18 +17,17 @@
                 <GradientStop Color="#FFBD9B77" Offset="0.676"/>
             </LinearGradientBrush>
         </StackPanel.Background>
-        <AppBarButton Icon="back" Label="Back" FontWeight="Bold" Foreground="Black"/>
-        <TextBlock HorizontalAlignment="Center" Text="Welcome to the Slot Machine Hub!" FontSize="40" FontWeight="Bold" Foreground="Black" Margin="0,0,0,20"/>
-
-        <Button HorizontalAlignment="Center" >
-            <StackPanel Margin="10">
-                <Image x:Name="FirstPicture" Source="../Assets/Deep's Pictures/Timeline.jpg" Width="1000" ></Image>
-                <TextBlock  Padding="10" Text="View History" FontSize="30" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+        <AppBarButton Icon="Back" Label="Back" Foreground="Black" FontWeight="Bold" Click="AppBarButton_Click"></AppBarButton>
+        <TextBlock Text="Welcome to Slot Machine Hub!" FontSize="40" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" Margin="0,0,0,10"/>
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <Image Source="../Assets/Deep's Pictures/Timeline.jpg" Width="1000"></Image>
+                <Button Content="View History" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" FontSize="20"/>
             </StackPanel>
-        </Button>
-        <TextBlock Margin="20" FontSize="30" HorizontalAlignment="Center" Text="Try our very own version of the popular slot machine! Click 'Play Game' below!" Foreground="Black" FontWeight="Bold"/>
-        <Button Padding="20" Margin="20" FontSize="40" Content="Play Game" HorizontalAlignment="Center"  Foreground="Black" FontWeight="Bold"></Button>
+            <TextBlock FontSize="20" Margin="10" Text="Try our very own version of Slot Machine" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+            <TextBlock Margin="20" Text="Click 'Play Game' Button below!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
+            <Button></Button>
 
-        
+        </StackPanel>
     </StackPanel>
 </Page>
