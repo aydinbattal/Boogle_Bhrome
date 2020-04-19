@@ -17,6 +17,7 @@ namespace Group9Project
         public User()
         {
             Money = 100;
+            //comment
         }
     }
 }
