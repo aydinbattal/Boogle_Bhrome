@@ -31,26 +31,27 @@ namespace Group9Project.Deep_s_Pages
             this.InitializeComponent();
         }
 
+        //Method that recalls the slot game over boolean in slotgame class and displays game over message
         private void IsGameOver()
         {
             if (_game.IsSlotOver())
             {
                 MessageDialog message = new MessageDialog("You have no more money, your game is over!");
                 message.ShowAsync();
-                PlaySlots.IsEnabled = false;
+                PlaySlots.IsEnabled = false; //Disables the button when the user has 0 money and 0 bonus
             }
         }
 
+        //Event that will assign an image to each of the image files in the XAML file
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             List<int> numbers = _game.Roll();
             if (_game.IsJackpot)
             {
-                MessageDialog message = new MessageDialog("Your Got a Jackpot");
+                MessageDialog message = new MessageDialog("Your Got a Jackpot"); //Will display a jackpot message when the user gets three 7s
                 message.ShowAsync();
             }
 
-            
             FirstPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[0]}.png", UriKind.RelativeOrAbsolute));
             SecondPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[1]}.png", UriKind.RelativeOrAbsolute));
             ThirdPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[2]}.png", UriKind.RelativeOrAbsolute));
@@ -58,6 +59,7 @@ namespace Group9Project.Deep_s_Pages
             IsGameOver();
         }
 
+        //Event that will take the user back to the slot machine front page.
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SlotMainPage));

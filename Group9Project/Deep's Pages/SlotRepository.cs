@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Group9Project.Deep_s_Pages
 {
+    //Class that contains the list that will contain all the different objects for the list view to display
     class SlotRepository
     {
+        //static list so that this list can be used in every class
         public static List<SlotTemplate> GetHistory()
         {
+            //creating a new list to input objects into.
             List<SlotTemplate> history = new List<SlotTemplate>();
 
+            //Adding all the information for all the years that will be used for the timeline.
             history.Add(new SlotTemplate
             {
 
