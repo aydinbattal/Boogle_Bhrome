@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using AppDevFinalProject.Karan_s_Pages.Classes;
+using Group9Project;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -41,6 +42,11 @@ namespace AppDevFinalProject.Karan_s_Pages
             //todo: subtract ticket price from balance from dylans program
             Seat seat = AirplaneListView.SelectedItem as Seat;
             this.Frame.Navigate(typeof(SeatsPage), seat);
+        }
+
+        private void BackButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

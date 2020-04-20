@@ -18,6 +18,7 @@
             </LinearGradientBrush>
         </StackPanel.Background>
         <TextBlock Foreground="DimGray" Padding="10" FontWeight="Bold" Text="Boogle Airlines" FontSize="30" TextAlignment="Center"></TextBlock>
+        <AppBarButton Foreground="Black" Icon="back" Label="Back" Click="BackButtonBase_OnClick"/>
         <ListView DoubleTapped="AirplaneListView_OnDoubleTapped" x:Name="AirplaneListView">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="classes:Seat">

@@ -3,24 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
+using Group9Project.Dylan_s_Pages;
 
 namespace Group9Project.Deep_s_Pages
 {
     class SlotGame
     {
-        public int Money;
+        
         public int Bonus;
         public bool IsJackpot;
 
-        public SlotGame()
-        {
-            Money = 400;
-        }
-
-
+        
         public bool IsSlotOver()
         {
-            return Money == 0 && Bonus == 0;
+            return User.Money == 0.0  && Bonus == 0;
         }
 
         private void CalculateMoney(List<int> numbers)
@@ -30,13 +27,13 @@ namespace Group9Project.Deep_s_Pages
             {
                 if (numbers[0] == 4) 
                 {
-                    Money += 1000;
+                    User.Money += 500;
                     IsJackpot = true;
                 }
 
                 else
                 {
-                    Money += 500;
+                    User.Money += 100;
                 }
 
             }
@@ -48,8 +45,8 @@ namespace Group9Project.Deep_s_Pages
 
             else
             {
-                if (Money > 0)
-                    Money -= 100;
+                if (User.Money > 0)
+                    User.Money -= 25;
                 else
                     Bonus--;
             }
@@ -58,12 +55,6 @@ namespace Group9Project.Deep_s_Pages
 
         public List<int> Roll()
         {
-            if (IsSlotOver())
-            {
-                throw new Exception("You have no more money");
-            }
-
-            
             Random randomNumberGenerator = new Random();
             List<int> numbers = new List<int>();
 

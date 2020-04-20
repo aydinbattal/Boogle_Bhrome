@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Group9Project.Dylan_s_Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,18 +31,19 @@ namespace Group9Project.Deep_s_Pages
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void IsGameOver()
         {
             if (_game.IsSlotOver())
             {
-                MessageDialog message = new MessageDialog("Your Game is over");
+                MessageDialog message = new MessageDialog("You have no more money, your game is over!");
                 message.ShowAsync();
                 PlaySlots.IsEnabled = false;
             }
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
             List<int> numbers = _game.Roll();
-
-            
             if (_game.IsJackpot)
             {
                 MessageDialog message = new MessageDialog("Your Got a Jackpot");
@@ -52,7 +54,8 @@ namespace Group9Project.Deep_s_Pages
             FirstPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[0]}.png", UriKind.RelativeOrAbsolute));
             SecondPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[1]}.png", UriKind.RelativeOrAbsolute));
             ThirdPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[2]}.png", UriKind.RelativeOrAbsolute));
-            CurrentBalanceLabel.Text = $"Money: {_game.Money}, Bonus: {_game.Bonus}";
+            CurrentBalanceLabel.Text = $"Money: {User.Money}, Bonus: {_game.Bonus}";
+            IsGameOver();
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)

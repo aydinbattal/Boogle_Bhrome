@@ -13,8 +13,36 @@
             <TextBox x:Name="Searchbar" Margin="10"  FontSize="30" PlaceholderText="Search for website..."/>
             <Button Click="SearchButtonClick" Margin="10" Content="Search" FontSize="30"/>
             <TextBlock Opacity="50" FontSize="100" Text="Boogle Bhrome" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <TextBox x:Name="Username" Margin="20" PlaceholderText="Type username" HorizontalAlignment="Center" FontSize="15"/>
-            <Button Click="UsernameButtonClick" FontSize="15" Content="Set Username" HorizontalAlignment="Center"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBox x:Name="Username" Margin="20" PlaceholderText="Type username" FontSize="10"/>
+                <Button Click="UsernameButtonClick" FontSize="10" Content="Set Username"/>
+                <TextBox x:Name="Name" Margin="20" PlaceholderText="Type name" FontSize="10"/>
+                <Button Click="NameButtonClick" FontSize="10" Content="Set Name"/>
+                <TextBox x:Name="Address" Margin="20" PlaceholderText="Type address" FontSize="10"/>
+                <Button Click="AddressButtonClick" FontSize="10" Content="Set Address"/>
+                <TextBox x:Name="PhoneNo" Margin="20" PlaceholderText="Type phone number" FontSize="10"/>
+                <Button Click="PhoneNoButtonClick" FontSize="10" Content="Set Phone Number"/>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/TipCalcQuickLinkPic.jpg"/>
+                    <Button Click="TipCalcQuickLinkButton" Content="www.tipcalculator.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/AiplaneQuickLinkPic.jpg"/>
+                    <Button Click="AirplaneQuickLinkButton" Content="www.airplane.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/BankQuickLinkPic.jpg"/>
+                    <Button Click="BankQuickLinkButton" Content="www.bank.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/SlotMachineQuickLinkPic.jpg"/>
+                    <Button Click="SlotMachineQuickLinkButton" Content="www.slotmachine.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>

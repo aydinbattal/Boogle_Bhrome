@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using AppDevFinalProject.Karan_s_Pages;
+using Group9Project.Aydin_s_Pages;
+using Group9Project.Deep_s_Pages;
 using Group9Project.Dylan_s_Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -27,6 +29,7 @@ namespace Group9Project
         public MainPage()
         {
             this.InitializeComponent();
+            User.Money = 100;
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
@@ -35,12 +38,52 @@ namespace Group9Project
 
             if (Searchbar.Text == "www.tipcalculator.com")
                 this.Frame.Navigate(typeof(TipCalculator));
+            else if(Searchbar.Text == "www.bank.com")
+                this.Frame.Navigate(typeof(BankPage));
+            else if(Searchbar.Text == "www.slotmachine.com")
+                this.Frame.Navigate(typeof(SlotMainPage));
+            else if(Searchbar.Text == "www.airplane.com")
+                this.Frame.Navigate(typeof(Airplane));
         }
         
         private void UsernameButtonClick(object sender, RoutedEventArgs e)
         {
-            //Username button click
             User.Username = Username.Text;
+        }
+
+        private void NameButtonClick(object sender, RoutedEventArgs e)
+        {
+            User.Name = Name.Text;
+        }
+
+        private void AddressButtonClick(object sender, RoutedEventArgs e)
+        {
+            User.Address = Address.Text;
+        }
+
+        private void PhoneNoButtonClick(object sender, RoutedEventArgs e)
+        {
+            User.PhoneNo = PhoneNo.Text;
+        }
+
+        private void TipCalcQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TipCalculator));
+        }
+
+        private void AirplaneQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Airplane));
+        }
+
+        private void BankQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BankPage));
+        }
+
+        private void SlotMachineQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SlotMainPage));
         }
     }
 }

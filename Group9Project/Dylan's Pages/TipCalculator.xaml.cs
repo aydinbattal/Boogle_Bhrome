@@ -25,15 +25,28 @@ namespace Group9Project.Dylan_s_Pages
         public double HST { get; set; }
         public double TipTotal { get; set; }
         public double FinalTotal { get; set; }
+        public double WalletAfterBill { get; set; }
         public TipCalculator()
         {
             this.InitializeComponent();
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void CalculateButtonClick(object sender, RoutedEventArgs e)
         {
-           // double billamount = BillAmount.Text;
-           // HST = (double)BillAmount.Text * 0.13;
+            HST = Double.Parse(BillAmount.Text) * 0.13;
+            TipTotal = Double.Parse(BillAmount.Text) * (Double.Parse(TipAmount.Text) * 0.01);
+            FinalTotal = Double.Parse(BillAmount.Text) + TipTotal + HST;
+            WalletAfterBill = User.Money - FinalTotal;
+            if (WalletAfterBill < 0)
+                WalletAfterBill = 0;
+
+            Output.Text = $"{User.Username}'s Bill:\n\n HST: ${HST}\n Tip Total: ${TipTotal}\nFinal Total: ${FinalTotal}\n\n If you payed this bill you would have ${WalletAfterBill} left in your wallet";
+
+        }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
