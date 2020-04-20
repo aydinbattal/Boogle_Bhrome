@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using AppDevFinalProject.Karan_s_Pages;
+using Group9Project.Aydin_s_Pages;
+using Group9Project.Deep_s_Pages;
 using Group9Project.Dylan_s_Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -36,9 +38,12 @@ namespace Group9Project
 
             if (Searchbar.Text == "www.tipcalculator.com")
                 this.Frame.Navigate(typeof(TipCalculator));
-
-            //BankPage.xaml
-            //SlotMainPage.xaml
+            else if(Searchbar.Text == "www.bankpage.com")
+                this.Frame.Navigate(typeof(BankPage));
+            else if(Searchbar.Text == "www.slotmachine.com")
+                this.Frame.Navigate(typeof(SlotMainPage));
+            else if(Searchbar.Text == "www.airplane.com")
+                this.Frame.Navigate(typeof(Airplane));
         }
         
         private void UsernameButtonClick(object sender, RoutedEventArgs e)
