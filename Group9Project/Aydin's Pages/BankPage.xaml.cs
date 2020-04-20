@@ -37,7 +37,7 @@ namespace Group9Project.Aydin_s_Pages
 
         private void AppBarButton_OnClick(object sender, RoutedEventArgs e)
         {
-            //todo: implement going back to mainsite
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

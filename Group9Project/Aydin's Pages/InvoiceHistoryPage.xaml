@@ -14,8 +14,8 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -26,15 +26,15 @@
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="5" Margin="0,0,0,166" Grid.RowSpan="3">
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="5" Margin="215,0,0,32">
             <ListView x:Name="InvoiceHistoryPageView">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:InvoiceSystem">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="10" FontSize="20" Text="{Binding InvoiceNumber}"/>
-                            <TextBlock Margin="10" FontSize="20" Text="{Binding Date}"/>
-                            <TextBlock Margin="10" FontSize="20" Text="{Binding DepositAmount }"/>
-                            <TextBlock Margin="10" FontSize="20" Text="{Binding WithDrawAmount }"/>
+                            <TextBlock Margin="10,0,0,0" FontSize="20" Foreground="Black" Text="{Binding InvoiceNumber}"/>
+                            <TextBlock Margin="185,0,0,0" FontSize="20" Foreground="Black" Text="{Binding Date}"/>
+                            <TextBlock Margin="150,0,0,0" FontSize="20" Foreground="Black" Text="{Binding DepositAmount }"/>
+                            <TextBlock Margin="260,0,0,0" FontSize="20" Foreground="Black" Text="{Binding WithDrawAmount }"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -44,6 +44,12 @@
         <TextBlock x:Name="PlaceholderName" Text="Username" Grid.Column="1" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Agency FB" Foreground="Black"/>
         <TextBlock x:Name="PlaceholderPhoneNum" Text="Phone Number" Grid.Column="2" FontSize="30" HorizontalAlignment="Center" FontFamily="Agency FB" FontWeight="Bold" VerticalAlignment="Center" Foreground="Black"/>
         <TextBlock x:Name="PlaceholderAddress" Text="Address" Grid.Column="3" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black"/>
+
+        <TextBlock Text="Invoice No" Grid.Column="0" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="215,0,0,0"/>
+        <TextBlock Text="Date Processed" Grid.Column="1" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="280,0,0,0"/>
+        <TextBlock Text="Deposit Amount" Grid.Column="2" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="280,0,0,0"/>
+        <TextBlock Text="Withdraw Amount" Grid.Column="3" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black" Grid.ColumnSpan="2" Margin="273,0,0,0"/>
+
 
 
         <Button x:Name="BackBankBtn" Content="Back to Banking Page" FontSize="30" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" Click="BackBankButton_OnClick" FontFamily="Agency FB" FontWeight="Bold" Foreground="Black"/>
