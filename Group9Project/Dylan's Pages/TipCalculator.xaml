@@ -9,13 +9,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/tipcalcbackground.jpg"/>
+        </Grid.Background>
         <StackPanel>
             <Button Click="BackButtonClick" Content="Back" FontSize="15" Margin="10"/>
-            <TextBlock Margin="30" HorizontalAlignment="Center" Text="Tip Calculator" FontSize="75"/>
+            <TextBlock Margin="10" HorizontalAlignment="Center" Text="Tip Calculator" FontSize="75"/>
             <TextBox x:Name="BillAmount" PlaceholderText="Bill Amount" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
             <TextBox x:Name="TipAmount" PlaceholderText="Tip Amount" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
             <Button Click="CalculateButtonClick" Content="Calculate" FontSize="30" HorizontalAlignment="Center" Margin="20"/>
-            <TextBlock x:Name="Output" HorizontalAlignment="Center" FontSize="30" Margin="50"/>
+            <TextBlock x:Name="Output" HorizontalAlignment="Center" FontSize="30" Margin="20"/>
         </StackPanel>
     </Grid>
 </Page>

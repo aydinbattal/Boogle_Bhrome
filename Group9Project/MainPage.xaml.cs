@@ -38,7 +38,7 @@ namespace Group9Project
 
             if (Searchbar.Text == "www.tipcalculator.com")
                 this.Frame.Navigate(typeof(TipCalculator));
-            else if(Searchbar.Text == "www.bankpage.com")
+            else if(Searchbar.Text == "www.bank.com")
                 this.Frame.Navigate(typeof(BankPage));
             else if(Searchbar.Text == "www.slotmachine.com")
                 this.Frame.Navigate(typeof(SlotMainPage));
@@ -64,6 +64,26 @@ namespace Group9Project
         private void PhoneNoButtonClick(object sender, RoutedEventArgs e)
         {
             User.PhoneNo = PhoneNo.Text;
+        }
+
+        private void TipCalcQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(TipCalculator));
+        }
+
+        private void AirplaneQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Airplane));
+        }
+
+        private void BankQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BankPage));
+        }
+
+        private void SlotMachineQuickLinkButton(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SlotMainPage));
         }
     }
 }

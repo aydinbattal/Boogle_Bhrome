@@ -165,7 +165,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AiplaneQuickLinkPic.jpg" />
     <Content Include="Assets\bankbackground.png" />
+    <Content Include="Assets\BankQuickLinkPic.jpg" />
     <Content Include="Assets\Deep%27s Pictures\1891SlotMachine.jpg" />
     <Content Include="Assets\Deep%27s Pictures\1964SlotMachine.jpg" />
     <Content Include="Assets\Deep%27s Pictures\1996+SlotMachine.jpg" />
@@ -179,6 +181,9 @@
     <Content Include="Assets\Japan.gif" />
     <Content Include="Assets\Deep%27s Pictures\2.png" />
     <Content Include="Assets\Deep%27s Pictures\3.png" />
+    <Content Include="Assets\SlotMachineQuickLinkPic.jpg" />
+    <Content Include="Assets\tipcalcbackground.jpg" />
+    <Content Include="Assets\TipCalcQuickLinkPic.jpg" />
     <Content Include="Assets\United-Kingdom.gif" />
     <Content Include="Assets\USA.gif" />
     <Content Include="Properties\Default.rd.xml" />

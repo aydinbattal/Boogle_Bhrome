@@ -24,6 +24,25 @@
                 <Button Click="PhoneNoButtonClick" FontSize="10" Content="Set Phone Number"/>
             </StackPanel>
 
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/TipCalcQuickLinkPic.jpg"/>
+                    <Button Click="TipCalcQuickLinkButton" Content="www.tipcalculator.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/AiplaneQuickLinkPic.jpg"/>
+                    <Button Click="AirplaneQuickLinkButton" Content="www.airplane.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/BankQuickLinkPic.jpg"/>
+                    <Button Click="BankQuickLinkButton" Content="www.bank.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+                <StackPanel Margin="10">
+                    <Image Height="140" Width="200" Source="Assets/SlotMachineQuickLinkPic.jpg"/>
+                    <Button Click="SlotMachineQuickLinkButton" Content="www.slotmachine.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                </StackPanel>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>
