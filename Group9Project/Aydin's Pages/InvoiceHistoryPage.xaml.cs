@@ -23,25 +23,29 @@ namespace Group9Project.Aydin_s_Pages
     /// </summary>
     public sealed partial class InvoiceHistoryPage : Page
     {
-        private List<InvoiceSystem> invoice = new List<InvoiceSystem>();
+        private List<InvoiceSystem> _invoice = new List<InvoiceSystem>();
+
+        //Gets username, phone number and address from main site.
         public InvoiceHistoryPage()
         {
             this.InitializeComponent();
             PlaceholderName.Text = User.Name;
             PlaceholderPhoneNum.Text = User.PhoneNo;
-            PlaceholderAddress.Text = User.PhoneNo;
+            PlaceholderAddress.Text = User.Address;
             //InvoicePageView.ItemsSource = Invoice.InvoiceList;
         }
 
+        //Gets list of invoices and displays them in a list view.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            invoice = e.Parameter as List<InvoiceSystem>;
-            InvoiceHistoryPageView.ItemsSource = invoice;
+            _invoice = e.Parameter as List<InvoiceSystem>;
+            InvoiceHistoryPageView.ItemsSource = _invoice;
         }
 
+        //Navigates back to bank site homepage.
         private void BackBankButton_OnClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BankPage), invoice);
+            this.Frame.Navigate(typeof(BankPage), _invoice);
         }
     }
 }

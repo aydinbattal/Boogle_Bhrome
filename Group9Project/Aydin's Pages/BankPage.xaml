@@ -34,7 +34,7 @@
 
         <TextBlock x:Name="PlaceholderDate" Text="Date" Grid.Column="4" Grid.Row="0" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Center" Foreground="Black"/>
 
-        <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
             <TextBlock x:Name="PlaceholderName" Text="Username" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,50" VerticalAlignment="Stretch" FontWeight="Bold" FontFamily="Agency FB" Foreground="Black"/>
             <TextBlock x:Name="PlaceholderBalance" Text="Balance" FontSize="30" HorizontalAlignment="Center" Margin="0,0,0,50" FontFamily="Agency FB" FontWeight="Bold" Foreground="Black"/>
             <TextBlock x:Name="PlaceholderOverdraft" Text="Overdraft Amount" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Agency FB" Foreground="Black"/>

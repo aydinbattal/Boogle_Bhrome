@@ -28,55 +28,69 @@ namespace Group9Project.Aydin_s_Pages
 
         private InvoiceSystem _invoice = new InvoiceSystem();
 
+        //Gets username, money from the main site.
         public BankPage()
         {
             this.InitializeComponent();
             PlaceholderDate.Text = DateTime.Now.ToString();
             PlaceholderName.Text = User.Name;
             PlaceholderBalance.Text = User.Money.ToString();
-            //PlaceholderBalance.Text = $"Your Balance: {bank.Balance}";
-            //PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
+            //PlaceholderOverdraft.Text = $"Overdraft Limit: {bank.OverdraftAmount}";
         }
 
+        //Navigates back to the main site.
         private void AppBarButton_OnClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        //Adds the invoice to user's invoice history.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             List<InvoiceSystem> invoices = e.Parameter as List<InvoiceSystem>;
 
             if (invoices != null)
             {
-                foreach (var invoice in invoices)
+                foreach (var oneInvoice in invoices)
                 {
-                    _invoice.InvoiceList.Add(invoice);
-                    bank.UpdateValues(invoice.TempBalance, invoice.TempOverdraftAmount);
+                    _invoice.InvoiceList.Add(oneInvoice);
+                    bank.UpdateValues(oneInvoice.TempBalance, oneInvoice.TempOverdraftAmount);
                 }
             }
             PlaceholderBalance.Text = bank.Balance.ToString();
             PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
 
         }
+
+        //Processes depositing&withdrawing based on user input then sends it to the generate invoice method located in InvoiceSystem
         private void ProcessButton_OnClick(object sender, RoutedEventArgs e)
         {
-            double depositAmt = double.Parse(DepositAmt.Text);
-            double withdrawAmt = double.Parse(WithdrawAmt.Text);
+            try
+            {
+                double depositAmt = double.Parse(DepositAmt.Text);
+                double withdrawAmt = double.Parse(WithdrawAmt.Text);
 
-            bank.Deposit(depositAmt);
-            bank.Withdraw(withdrawAmt);
-            _invoice.AddInvoice(depositAmt, withdrawAmt, bank.Balance, bank.OverdraftAmount);
+                bank.Deposit(depositAmt);
+                bank.Withdraw(withdrawAmt);
+                _invoice.GenerateInvoice(depositAmt, withdrawAmt, bank.Balance, bank.OverdraftAmount);
 
-            int count = _invoice.InvoiceList.Count;
-            MessageDialog dialog = new MessageDialog($"Invoice Number = {_invoice.InvoiceList[count - 1].InvoiceNumber} \n Date Processed = {_invoice.InvoiceList[count - 1].Date} \n Deposit Amount = {DepositAmt.Text} \n Withdraw Amount = {WithdrawAmt.Text}");
-            dialog.ShowAsync();
+                int count = _invoice.InvoiceList.Count;
+                MessageDialog dialog = new MessageDialog($"Invoice Number = {_invoice.InvoiceList[count - 1].InvoiceNumber} \n Date Processed = {_invoice.InvoiceList[count - 1].Date} \n Deposit Amount = {DepositAmt.Text} \n Withdraw Amount = {WithdrawAmt.Text}");
+                dialog.ShowAsync();
 
-            PlaceholderBalance.Text = bank.Balance.ToString();
-            PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
+                PlaceholderBalance.Text = bank.Balance.ToString();
+                PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
+            }
+            catch (FormatException exception)
+            {
+                MessageDialog warning = new MessageDialog("Please enter a valid amount!");
+                warning.ShowAsync();
+            }
+
+            
         }
 
-
+        //Passes the list of invoices to proper page and navigates there.
         private void InvoiceHistoryButton_OnClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(InvoiceHistoryPage), _invoice.InvoiceList);

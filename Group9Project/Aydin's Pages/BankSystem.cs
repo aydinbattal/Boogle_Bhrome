@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Group9Project.Dylan_s_Pages;
 
 namespace Group9Project.Aydin_s_Pages
@@ -17,10 +18,13 @@ namespace Group9Project.Aydin_s_Pages
             OverdraftAmount = 0;
         }
 
+        //Calculates balance after depositing money.
         public void Deposit(double amount)
         {
             Balance += amount;
         }
+
+        //Calculates balance after withdrawing money.
         public void Withdraw(double amount)
         {
 
@@ -35,10 +39,16 @@ namespace Group9Project.Aydin_s_Pages
             }
 
             if (OverdraftAmount <= -100)
-                throw new Exception();
+            {
+                MessageDialog warning = new MessageDialog("You just hit the Overdraft limit of 100");
+                warning.ShowAsync();
+            }
+                
+
 
         }
 
+        //Converts properties to variables so they can be updated.
         public void UpdateValues(double balance, double overdraftAmt)
         {
             Balance = balance;

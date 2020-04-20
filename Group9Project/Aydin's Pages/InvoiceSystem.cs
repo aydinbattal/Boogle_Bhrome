@@ -10,15 +10,17 @@ namespace Group9Project.Aydin_s_Pages
     {
         public int InvoiceNumber { get; set; }
         public DateTime Date { get; set; }
-
         public double DepositAmount { get; set; }
         public double WithDrawAmount { get; set; }
-        public double TempBalance { get; set; }
 
-        public double TempOverdraftAmount { get; set; }
+        public double TempBalance;
+
+        public double TempOverdraftAmount;
 
         public List<InvoiceSystem> InvoiceList = new List<InvoiceSystem>();
-        public void AddInvoice(double depositAmt, double withdrawAmt, double balance, double overdraftAmt)
+
+        //Generates the invoice.
+        public void GenerateInvoice(double depositAmt, double withdrawAmt, double balance, double overdraftAmt)
         {
             int id = InvoiceList.Count + 1;
             InvoiceList.Add(new InvoiceSystem
