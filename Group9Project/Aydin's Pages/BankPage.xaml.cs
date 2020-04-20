@@ -32,7 +32,7 @@ namespace Group9Project.Aydin_s_Pages
         {
             this.InitializeComponent();
             PlaceholderDate.Text = DateTime.Now.ToString();
-            PlaceholderName.Text = User.Name;
+            //PlaceholderName.Text = User.Name;
             PlaceholderBalance.Text = User.Money.ToString();
             //PlaceholderBalance.Text = $"Your Balance: {bank.Balance}";
             //PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();

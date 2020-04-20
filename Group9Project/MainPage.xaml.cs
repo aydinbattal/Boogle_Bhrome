@@ -30,6 +30,33 @@ namespace Group9Project
         {
             this.InitializeComponent();
             User.Money = 100;
+            User.PhoneNo = "";
+            User.Name = "";
+            User.Address = "";
+            User.Username = "";
+            ButtonChange();
+        }
+
+        private void ButtonChange()
+        {
+            if (string.IsNullOrEmpty(Username.Text) || string.IsNullOrEmpty(Name.Text) ||
+                string.IsNullOrEmpty(Address.Text) || string.IsNullOrEmpty(PhoneNo.Text))
+            {
+                TipCalcButton.IsEnabled = false;
+                AirplaneButton.IsEnabled = false;
+                BankButton.IsEnabled = false;
+                SlotMachineButton.IsEnabled = false;
+                SearchbarButton.IsEnabled = false;
+            }
+            else
+            {
+                TipCalcButton.IsEnabled = true;
+                AirplaneButton.IsEnabled = true;
+                BankButton.IsEnabled = true;
+                SlotMachineButton.IsEnabled = true;
+                SearchbarButton.IsEnabled = true;
+            }
+                
         }
 
         private void SearchButtonClick(object sender, RoutedEventArgs e)
@@ -44,26 +71,6 @@ namespace Group9Project
                 this.Frame.Navigate(typeof(SlotMainPage));
             else if(Searchbar.Text == "www.airplane.com")
                 this.Frame.Navigate(typeof(Airplane));
-        }
-        
-        private void UsernameButtonClick(object sender, RoutedEventArgs e)
-        {
-            User.Username = Username.Text;
-        }
-
-        private void NameButtonClick(object sender, RoutedEventArgs e)
-        {
-            User.Name = Name.Text;
-        }
-
-        private void AddressButtonClick(object sender, RoutedEventArgs e)
-        {
-            User.Address = Address.Text;
-        }
-
-        private void PhoneNoButtonClick(object sender, RoutedEventArgs e)
-        {
-            User.PhoneNo = PhoneNo.Text;
         }
 
         private void TipCalcQuickLinkButton(object sender, RoutedEventArgs e)
@@ -84,6 +91,46 @@ namespace Group9Project
         private void SlotMachineQuickLinkButton(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SlotMainPage));
+        }
+
+        private void Username_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            ButtonChange();
+        }
+
+        private void Name_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            ButtonChange();
+        }
+
+        private void Address_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            ButtonChange();
+        }
+
+        private void PhoneNo_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            ButtonChange();
+        }
+
+        private void Username_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            User.Username = Username.Text;
+        }
+
+        private void Name_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            User.Name = Name.Text;
+        }
+
+        private void Address_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            User.Address = Address.Text;
+        }
+
+        private void PhoneNo_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            User.PhoneNo = PhoneNo.Text;
         }
     }
 }
