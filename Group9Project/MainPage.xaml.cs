@@ -49,7 +49,6 @@ namespace Group9Project
                 BankButton.IsEnabled = false;
                 SlotMachineButton.IsEnabled = false;
                 SearchbarButton.IsEnabled = false;
-                SaveInformation.IsEnabled = false;
             }
             else
             {
@@ -58,7 +57,6 @@ namespace Group9Project
                 BankButton.IsEnabled = true;
                 SlotMachineButton.IsEnabled = true;
                 SearchbarButton.IsEnabled = true;
-                SaveInformation.IsEnabled = true;
             }
 
         }
@@ -145,14 +143,6 @@ namespace Group9Project
         private void PhoneNo_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
         {
             //changes user PhoneNo property based on textbox.
-            User.PhoneNo = PhoneNo.Text;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            User.Username = Username.Text;
-            User.Name = Name.Text;
-            User.Address = Address.Text;
             User.PhoneNo = PhoneNo.Text;
         }
     }
