@@ -48,8 +48,22 @@ namespace Group9Project
         
         private void UsernameButtonClick(object sender, RoutedEventArgs e)
         {
-            //Username button click
             User.Username = Username.Text;
+        }
+
+        private void NameButtonClick(object sender, RoutedEventArgs e)
+        {
+            User.Name = Name.Text;
+        }
+
+        private void AddressButtonClick(object sender, RoutedEventArgs e)
+        {
+            User.Address = Address.Text;
+        }
+
+        private void PhoneNoButtonClick(object sender, RoutedEventArgs e)
+        {
+            User.PhoneNo = PhoneNo.Text;
         }
     }
 }
