@@ -27,13 +27,13 @@ namespace Group9Project.Deep_s_Pages
             {
                 if (numbers[0] == 4) 
                 {
-                    User.Money += 100;
+                    User.Money += 500;
                     IsJackpot = true;
                 }
 
                 else
                 {
-                    User.Money += 50;
+                    User.Money += 100;
                 }
 
             }
