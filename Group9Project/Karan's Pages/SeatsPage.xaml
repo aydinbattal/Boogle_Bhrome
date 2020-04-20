@@ -36,9 +36,7 @@
                             </StackPanel>
 
                             <TextBlock x:Name="SeatDesc" Foreground="Black" FontSize="20" TextWrapping="WrapWholeWords" Margin="10" MaxWidth="550" Text="{x:Bind Description}"></TextBlock>
-                            <!-- TODO: Once dylans class works display remaining balance -->
                             <TextBlock x:Name="Balance"  Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="Remaining Balance: XXXX "></TextBlock>
-                            <!-- TODO: Once dylans class works display the customer name -->
                             <TextBlock x:Name="Name"  Foreground="Black" FontSize="25" TextWrapping="Wrap" Margin="10" Text="RSVP (Name): XXXX "></TextBlock>
                         </StackPanel>
                     </StackPanel>
