@@ -8,6 +8,7 @@ namespace Group9Project.Dylan_s_Pages
 {
     static class User
     {
+        //properties for User.
         public static string Name { get; set; }
         public static string Address { get; set; }
         public static double Money { get; set; }
