@@ -139,6 +139,7 @@
     </Compile>
     <Compile Include="Deep%27s Pages\SlotRepository.cs" />
     <Compile Include="Deep%27s Pages\SlotTemplate.cs" />
+    <Compile Include="Dylan%27s Pages\User.cs" />
     <Compile Include="Karan%27s Pages\Airplane.xaml.cs">
       <DependentUpon>Airplane.xaml</DependentUpon>
     </Compile>
