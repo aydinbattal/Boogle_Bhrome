@@ -8,18 +8,22 @@ using Group9Project.Dylan_s_Pages;
 
 namespace Group9Project.Deep_s_Pages
 {
+    //Class that contains all the required methods for the slot machine game to function
     class SlotGame
     {
         
+        //Properties that represent the bonus turns and a jackpot boolean.
         public int Bonus;
         public bool IsJackpot;
 
         
+        //Method that calculates if the slot game is over or not.
         public bool IsSlotOver()
         {
             return User.Money == 0.0  && Bonus == 0;
         }
 
+        //Method that calculates all the winnings and losses everytime the game is played.
         private void CalculateMoney(List<int> numbers)
         {
             IsJackpot = false;
@@ -53,6 +57,7 @@ namespace Group9Project.Deep_s_Pages
 
         }
 
+        //Method that is responsible to assign the slot machine pictures into a list of 3 to be displayed.
         public List<int> Roll()
         {
             Random randomNumberGenerator = new Random();

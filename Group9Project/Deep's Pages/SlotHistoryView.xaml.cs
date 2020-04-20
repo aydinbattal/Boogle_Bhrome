@@ -27,12 +27,14 @@ namespace Group9Project.Deep_s_Pages
             this.InitializeComponent();
         }
 
+        //Event that when navigated to this page, the double tapped item will show all the appropriate information.
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            SlotTemplate item = e.Parameter as SlotTemplate;
+            SlotTemplate item = e.Parameter as SlotTemplate; //assigns a variable to the list object that is passed by a parameter
             ViewHistory.Items.Add(item);
         }
 
+        //Event that will take the user back to the history timeline view.
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();

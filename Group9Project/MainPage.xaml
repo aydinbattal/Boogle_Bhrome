@@ -11,35 +11,32 @@
     <Grid>
         <StackPanel>
             <TextBox x:Name="Searchbar" Margin="10"  FontSize="30" PlaceholderText="Search for website..."/>
-            <Button Click="SearchButtonClick" Margin="10" Content="Search" FontSize="30"/>
+            <Button x:Name="SearchbarButton" Click="SearchButtonClick" Margin="10" Content="Search" FontSize="30"/>
             <TextBlock Opacity="50" FontSize="100" Text="Boogle Bhrome" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBox x:Name="Username" Margin="20" PlaceholderText="Type username" FontSize="10"/>
-                <Button Click="UsernameButtonClick" FontSize="10" Content="Set Username"/>
-                <TextBox x:Name="Name" Margin="20" PlaceholderText="Type name" FontSize="10"/>
-                <Button Click="NameButtonClick" FontSize="10" Content="Set Name"/>
-                <TextBox x:Name="Address" Margin="20" PlaceholderText="Type address" FontSize="10"/>
-                <Button Click="AddressButtonClick" FontSize="10" Content="Set Address"/>
-                <TextBox x:Name="PhoneNo" Margin="20" PlaceholderText="Type phone number" FontSize="10"/>
-                <Button Click="PhoneNoButtonClick" FontSize="10" Content="Set Phone Number"/>
+                <TextBlock Text="Please fill before searching:" FontSize="20" VerticalAlignment="Center"/>
+                <TextBox TextChanging="Username_OnTextChanging" x:Name="Username" TextChanged="Username_OnTextChanged" Margin="20" PlaceholderText="Type username" FontSize="10"/>
+                <TextBox TextChanging="Name_OnTextChanging" x:Name="Name" TextChanged="Name_OnTextChanged" Margin="20" PlaceholderText="Type name" FontSize="10"/>
+                <TextBox TextChanging="Address_OnTextChanging" x:Name="Address" TextChanged="Address_OnTextChanged" Margin="20" PlaceholderText="Type address" FontSize="10"/>
+                <TextBox TextChanging="PhoneNo_OnTextChanging" x:Name="PhoneNo" TextChanged="PhoneNo_OnTextChanged" Margin="20" PlaceholderText="Type phone number" FontSize="10"/>
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <StackPanel Margin="10">
                     <Image Height="140" Width="200" Source="Assets/TipCalcQuickLinkPic.jpg"/>
-                    <Button Click="TipCalcQuickLinkButton" Content="www.tipcalculator.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                    <Button x:Name="TipCalcButton" Click="TipCalcQuickLinkButton" Content="www.tipcalculator.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <Image Height="140" Width="200" Source="Assets/AiplaneQuickLinkPic.jpg"/>
-                    <Button Click="AirplaneQuickLinkButton" Content="www.airplane.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                    <Button x:Name="AirplaneButton" Click="AirplaneQuickLinkButton" Content="www.airplane.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <Image Height="140" Width="200" Source="Assets/BankQuickLinkPic.jpg"/>
-                    <Button Click="BankQuickLinkButton" Content="www.bank.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                    <Button x:Name="BankButton" Click="BankQuickLinkButton" Content="www.bank.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
                 </StackPanel>
                 <StackPanel Margin="10">
                     <Image Height="140" Width="200" Source="Assets/SlotMachineQuickLinkPic.jpg"/>
-                    <Button Click="SlotMachineQuickLinkButton" Content="www.slotmachine.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
+                    <Button x:Name="SlotMachineButton" Click="SlotMachineQuickLinkButton" Content="www.slotmachine.com" HorizontalAlignment="Center" FontSize="15" Margin="10"/>
                 </StackPanel>
             </StackPanel>
 

@@ -22,17 +22,30 @@ namespace Group9Project.Dylan_s_Pages
     /// </summary>
     public sealed partial class TipCalculator : Page
     {
-        public double HST { get; set; }
+        //properties for calculations
+        public double HST { get; set; } 
         public double TipTotal { get; set; }
         public double FinalTotal { get; set; }
         public double WalletAfterBill { get; set; }
         public TipCalculator()
         {
+            //runs ButtonChange to disable buttons right away.
             this.InitializeComponent();
+            ButtonChange();
+        }
+
+        private void ButtonChange()
+        {
+            //makes sure texboxes are filled before enabling calculate button.
+            if (string.IsNullOrEmpty(BillAmount.Text) || string.IsNullOrEmpty(TipAmount.Text))
+                CalculateButton.IsEnabled = false;
+            else
+                CalculateButton.IsEnabled = true;
         }
 
         private void CalculateButtonClick(object sender, RoutedEventArgs e)
         {
+            //calculates and prints values.
             HST = Double.Parse(BillAmount.Text) * 0.13;
             TipTotal = Double.Parse(BillAmount.Text) * (Double.Parse(TipAmount.Text) * 0.01);
             FinalTotal = Double.Parse(BillAmount.Text) + TipTotal + HST;
@@ -46,7 +59,20 @@ namespace Group9Project.Dylan_s_Pages
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
+            //navigates back to mainpage when back button is clicked.
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void BillAmount_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            //redetermines if button should be disabled
+            ButtonChange();
+        }
+
+        private void TipAmount_OnTextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            //redetermines if button should be disabled
+            ButtonChange();
         }
     }
 }

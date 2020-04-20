@@ -28,6 +28,7 @@ namespace Group9Project.Deep_s_Pages
             PopulateHistory();
         }
 
+        //Method that will populate the List view from the list that was created in the slot repository.
         private void PopulateHistory()
         {
             foreach (var history in SlotRepository.GetHistory())
@@ -36,12 +37,14 @@ namespace Group9Project.Deep_s_Pages
             }
         }
 
+        //Event that when will assign the double clicked date as a parameter and pass it to the slotHistoryView.
         private void MainListView_OnDoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
             SlotTemplate item = MainListView.SelectedItem as SlotTemplate;
             this.Frame.Navigate(typeof(SlotHistoryView), item);
         }
 
+        //Event that will take the user back to the slot machine homepage
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SlotMainPage));

@@ -15,9 +15,9 @@
         <StackPanel>
             <Button Click="BackButtonClick" Content="Back" FontSize="15" Margin="10"/>
             <TextBlock Margin="10" HorizontalAlignment="Center" Text="Tip Calculator" FontSize="75"/>
-            <TextBox x:Name="BillAmount" PlaceholderText="Bill Amount" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
-            <TextBox x:Name="TipAmount" PlaceholderText="Tip Amount" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
-            <Button Click="CalculateButtonClick" Content="Calculate" FontSize="30" HorizontalAlignment="Center" Margin="20"/>
+            <TextBox TextChanging="BillAmount_OnTextChanging" x:Name="BillAmount" Text="" PlaceholderText="Bill Amount" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
+            <TextBox TextChanging="TipAmount_OnTextChanging" x:Name="TipAmount" Text="" PlaceholderText="Tip Amount" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
+            <Button x:Name="CalculateButton" Click="CalculateButtonClick" Content="Calculate" FontSize="30" HorizontalAlignment="Center" Margin="20"/>
             <TextBlock x:Name="Output" HorizontalAlignment="Center" FontSize="30" Margin="20"/>
         </StackPanel>
     </Grid>
