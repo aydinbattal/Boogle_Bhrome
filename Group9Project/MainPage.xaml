@@ -9,11 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <Button Content="Airplane Page" FontSize="50" Height="256" Width="493" Click="AirplaneButtonBase_OnClick"/>
+        <StackPanel>
+            <TextBox x:Name="Searchbar" Margin="10"  FontSize="30" PlaceholderText="Search for website..."/>
+            <Button Click="ButtonBase_OnClick" Margin="10" Content="Search" FontSize="30"/>
+            <TextBlock Opacity="50" FontSize="100" Text="Boogle Bhrome" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </StackPanel>
-       
-        <!--test123-->
-
     </Grid>
 </Page>
