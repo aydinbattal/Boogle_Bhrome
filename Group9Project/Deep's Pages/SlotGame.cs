@@ -30,13 +30,13 @@ namespace Group9Project.Deep_s_Pages
             {
                 if (numbers[0] == 4) 
                 {
-                    Money += 1000;
+                    Money += 500;
                     IsJackpot = true;
                 }
 
                 else
                 {
-                    Money += 500;
+                    Money += 100;
                 }
 
             }
@@ -49,7 +49,7 @@ namespace Group9Project.Deep_s_Pages
             else
             {
                 if (Money > 0)
-                    Money -= 100;
+                    Money -= 5;
                 else
                     Bonus--;
             }
