@@ -26,7 +26,7 @@
             </StackPanel>
             <TextBlock FontSize="20" Margin="10" Text="Try our very own version of Slot Machine" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
             <TextBlock Text="Click 'Play Game' Button below!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold"/>
-            <Button FontSize="40" Margin="10" Content="Play Game!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" Click="Button_Click_1" />
+            <Button IsEnabled="True" FontSize="40" Margin="10" Content="Play Game!" HorizontalAlignment="Center" Foreground="Black" FontWeight="Bold" Click="Button_Click_1" />
 
         </StackPanel>
     </StackPanel>

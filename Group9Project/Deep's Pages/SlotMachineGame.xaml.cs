@@ -31,18 +31,19 @@ namespace Group9Project.Deep_s_Pages
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void IsGameOver()
         {
             if (_game.IsSlotOver())
             {
-                MessageDialog message = new MessageDialog("Your Game is over");
+                MessageDialog message = new MessageDialog("You have no more money, your game is over!");
                 message.ShowAsync();
                 PlaySlots.IsEnabled = false;
             }
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
             List<int> numbers = _game.Roll();
-
-            
             if (_game.IsJackpot)
             {
                 MessageDialog message = new MessageDialog("Your Got a Jackpot");
@@ -54,6 +55,7 @@ namespace Group9Project.Deep_s_Pages
             SecondPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[1]}.png", UriKind.RelativeOrAbsolute));
             ThirdPicture.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Deep's Pictures/{numbers[2]}.png", UriKind.RelativeOrAbsolute));
             CurrentBalanceLabel.Text = $"Money: {User.Money}, Bonus: {_game.Bonus}";
+            IsGameOver();
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
