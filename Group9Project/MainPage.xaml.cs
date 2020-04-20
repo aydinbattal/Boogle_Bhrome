@@ -36,6 +36,9 @@ namespace Group9Project
 
             if (Searchbar.Text == "www.tipcalculator.com")
                 this.Frame.Navigate(typeof(TipCalculator));
+
+            //BankPage.xaml
+            //SlotMainPage.xaml
         }
         
         private void UsernameButtonClick(object sender, RoutedEventArgs e)
