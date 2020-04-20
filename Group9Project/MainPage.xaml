@@ -20,6 +20,7 @@
                 <TextBox TextChanging="Address_OnTextChanging" x:Name="Address" TextChanged="Address_OnTextChanged" Margin="20" PlaceholderText="Type address" FontSize="10"/>
                 <TextBox TextChanging="PhoneNo_OnTextChanging" x:Name="PhoneNo" TextChanged="PhoneNo_OnTextChanged" Margin="20" PlaceholderText="Type phone number" FontSize="10"/>
             </StackPanel>
+            <Button x:Name="SaveInformation" Margin="10" HorizontalAlignment="Center" Content="Save Information" Click="Button_Click"></Button>
 
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <StackPanel Margin="10">
