@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Group9Project.Dylan_s_Pages;
 
 namespace Group9Project.Aydin_s_Pages
 {
@@ -10,10 +11,9 @@ namespace Group9Project.Aydin_s_Pages
     {
         public double Balance { get; protected set; }
         public double OverdraftAmount { get; protected set; }
-        public string User { get; set; }
         public BankSystem()
         {
-            Balance = 100;
+            Balance = User.Money;
             OverdraftAmount = 0;
         }
 

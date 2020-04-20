@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Group9Project.Dylan_s_Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,6 +32,8 @@ namespace Group9Project.Aydin_s_Pages
         {
             this.InitializeComponent();
             PlaceholderDate.Text = DateTime.Now.ToString();
+            PlaceholderName.Text = User.Name;
+            PlaceholderBalance.Text = User.Money.ToString();
             //PlaceholderBalance.Text = $"Your Balance: {bank.Balance}";
             //PlaceholderOverdraft.Text = bank.OverdraftAmount.ToString();
         }

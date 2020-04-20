@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Group9Project.Dylan_s_Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,6 +27,9 @@ namespace Group9Project.Aydin_s_Pages
         public InvoiceHistoryPage()
         {
             this.InitializeComponent();
+            PlaceholderName.Text = User.Name;
+            PlaceholderPhoneNum.Text = User.PhoneNo;
+            PlaceholderAddress.Text = User.PhoneNo;
             //InvoicePageView.ItemsSource = Invoice.InvoiceList;
         }
 
